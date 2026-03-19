@@ -28,12 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            btnsend = new Button();
+            Mylistbox = new ListBox();
+            name = new Label();
+            Mytextbox = new TextBox();
+            SuspendLayout();
+            // 
+            // btnsend
+            // 
+            btnsend.FlatStyle = FlatStyle.System;
+            btnsend.Font = new Font("맑은 고딕", 18F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnsend.ForeColor = SystemColors.ControlText;
+            btnsend.Location = new Point(747, 414);
+            btnsend.Name = "btnsend";
+            btnsend.Size = new Size(276, 142);
+            btnsend.TabIndex = 0;
+            btnsend.Text = "전송";
+            btnsend.UseVisualStyleBackColor = true;
+            btnsend.Click += btnsend_Click;
+            // 
+            // Mylistbox
+            // 
+            Mylistbox.FormattingEnabled = true;
+            Mylistbox.Location = new Point(147, 66);
+            Mylistbox.Name = "Mylistbox";
+            Mylistbox.Size = new Size(876, 319);
+            Mylistbox.TabIndex = 1;
+            Mylistbox.SelectedIndexChanged += Mylistbox_SelectedIndexChanged;
+            // 
+            // name
+            // 
+            name.AutoSize = true;
+            name.Font = new Font("맑은 고딕", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            name.Location = new Point(147, 12);
+            name.Name = "name";
+            name.Size = new Size(235, 40);
+            name.TabIndex = 2;
+            name.Text = "Echo Messenger";
+            name.Click += name_Click;
+            // 
+            // Mytextbox
+            // 
+            Mytextbox.Font = new Font("맑은 고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Mytextbox.Location = new Point(147, 499);
+            Mytextbox.Name = "Mytextbox";
+            Mytextbox.Size = new Size(588, 57);
+            Mytextbox.TabIndex = 3;
+            Mytextbox.TextChanged += Mytextbox_TextChanged;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1094, 582);
+            Controls.Add(Mytextbox);
+            Controls.Add(name);
+            Controls.Add(Mylistbox);
+            Controls.Add(btnsend);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnsend;
+        private ListBox Mylistbox;
+        private Label name;
+        private TextBox Mytextbox;
     }
 }
