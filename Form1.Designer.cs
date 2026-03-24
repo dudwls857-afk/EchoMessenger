@@ -33,6 +33,8 @@
             btnSend = new Button();
             lstChat = new ListBox();
             chatcount = new Label();
+            btndelete = new Button();
+            btnclear = new Button();
             SuspendLayout();
             // 
             // EchoMessenger
@@ -89,11 +91,35 @@
             chatcount.TabIndex = 4;
             chatcount.Click += chatcount_Click;
             // 
+            // btndelete
+            // 
+            btndelete.BackColor = Color.Silver;
+            btndelete.Location = new Point(807, 561);
+            btndelete.Name = "btndelete";
+            btndelete.Size = new Size(75, 23);
+            btndelete.TabIndex = 5;
+            btndelete.Text = "삭제";
+            btndelete.UseVisualStyleBackColor = false;
+            btndelete.Click += btndelete_Click;
+            // 
+            // btnclear
+            // 
+            btnclear.BackColor = Color.Silver;
+            btnclear.Location = new Point(939, 554);
+            btnclear.Name = "btnclear";
+            btnclear.Size = new Size(119, 36);
+            btnclear.TabIndex = 6;
+            btnclear.Text = "대화 기록 삭제";
+            btnclear.UseVisualStyleBackColor = false;
+            btnclear.Click += btnclear_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1193, 628);
+            Controls.Add(btnclear);
+            Controls.Add(btndelete);
             Controls.Add(chatcount);
             Controls.Add(lstChat);
             Controls.Add(btnSend);
@@ -112,5 +138,7 @@
         private Button btnSend;
         private ListBox lstChat;
         private Label chatcount;
+        private Button btndelete;
+        private Button btnclear;
     }
 }

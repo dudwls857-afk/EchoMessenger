@@ -14,6 +14,12 @@ namespace EchoMessenger
             if (string.IsNullOrWhiteSpace(msg))
                 return;
 
+            if (msg.Length > 50)
+            {
+                MessageBox.Show("50자 이하로 입력하세요.");
+                return;
+            }
+
             string time = DateTime.Now.ToString("HH:mm:ss");
             string result = $"[{time}] {msg}";
 
@@ -50,6 +56,26 @@ namespace EchoMessenger
         private void chatcount_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (lstChat.SelectedIndex != -1)
+            {
+                lstChat.Items.RemoveAt(lstChat.SelectedIndex);
+
+                chatcount.Text = $"현재 대화: {lstChat.Items.Count}개";
+            }
+            else
+            {
+                MessageBox.Show("삭제할 항목을 선택하세요.");
+            }
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            lstChat.Items.Clear();
+            chatcountsda.Text = "현재 대화: 0개";
         }
     }
 }
