@@ -32,6 +32,7 @@
             txtInput = new TextBox();
             btnSend = new Button();
             lstChat = new ListBox();
+            chatcount = new Label();
             SuspendLayout();
             // 
             // EchoMessenger
@@ -44,6 +45,7 @@
             EchoMessenger.Size = new Size(283, 50);
             EchoMessenger.TabIndex = 0;
             EchoMessenger.Text = "EchoMessenger";
+            EchoMessenger.Click += EchoMessenger_Click;
             // 
             // txtInput
             // 
@@ -76,12 +78,23 @@
             lstChat.Name = "lstChat";
             lstChat.Size = new Size(923, 304);
             lstChat.TabIndex = 3;
+            lstChat.SelectedIndexChanged += lstChat_SelectedIndexChanged_1;
+            // 
+            // chatcount
+            // 
+            chatcount.AutoSize = true;
+            chatcount.Location = new Point(514, 33);
+            chatcount.Name = "chatcount";
+            chatcount.Size = new Size(0, 15);
+            chatcount.TabIndex = 4;
+            chatcount.Click += chatcount_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1193, 628);
+            Controls.Add(chatcount);
             Controls.Add(lstChat);
             Controls.Add(btnSend);
             Controls.Add(txtInput);
@@ -98,5 +111,6 @@
         private TextBox txtInput;
         private Button btnSend;
         private ListBox lstChat;
+        private Label chatcount;
     }
 }
