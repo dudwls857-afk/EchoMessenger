@@ -24,4 +24,4 @@
 
 ## 실행 화면 (과제1)
 - 과제1 코드의 실행 스크린샷
-![과제1 실행화면](img/echo_messenger_1.png)(img/ech_messenger_2.png)
+![과제1 실행화면] <img src="img/echo 1.png" alt="1단계 코드의 실행 스크린샷">
