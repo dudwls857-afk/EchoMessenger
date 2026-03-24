@@ -39,7 +39,7 @@
 - 메시지 전송 이후에는 입력창이 자동으로 비워져 다음 메시지를 편리하게 입력할 수 있도록 구성하였다.
 
 - 과제2 코드의 실행 스크린샷
-![과제2 실행화면](img/echo2.png)
+![과제2 실행화면]<img src="img/echo 3.png" alt="1단계 코드의 실행 스크린샷">
 - 과제 내용
 - Label, TextBox, Button, ListBox를 적절히 배치합니다.
 - 전송 버튼 클릭 시 TextBox의 텍스트를 ListBox의 항목(Items)으로 추가합니다.
