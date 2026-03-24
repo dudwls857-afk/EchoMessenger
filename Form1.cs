@@ -11,6 +11,9 @@ namespace EchoMessenger
         {
             string msg = txtInput.Text;   // 입력값 가져오기
 
+            if (string.IsNullOrWhiteSpace(msg))
+                return;
+            
             lstChat.Items.Add(msg);       // 리스트에 추가
 
             txtInput.Clear();             // 입력창 비우기
@@ -19,6 +22,14 @@ namespace EchoMessenger
         private void lstChat_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSend.PerformClick(); // 버튼 대신 실행
+            }
         }
     }
 }
