@@ -29,53 +29,61 @@
         private void InitializeComponent()
         {
             EchoMessenger = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            listBox1 = new ListBox();
+            txtInput = new TextBox();
+            btnSend = new Button();
+            lstChat = new ListBox();
             SuspendLayout();
             // 
             // EchoMessenger
             // 
             EchoMessenger.AutoSize = true;
-            EchoMessenger.Location = new Point(135, 39);
+            EchoMessenger.Font = new Font("맑은 고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            EchoMessenger.ForeColor = Color.FromArgb(0, 0, 64);
+            EchoMessenger.Location = new Point(135, 9);
             EchoMessenger.Name = "EchoMessenger";
-            EchoMessenger.Size = new Size(39, 15);
+            EchoMessenger.Size = new Size(283, 50);
             EchoMessenger.TabIndex = 0;
-            EchoMessenger.Text = "label1";
+            EchoMessenger.Text = "EchoMessenger";
             // 
-            // textBox1
+            // txtInput
             // 
-            textBox1.Font = new Font("맑은 고딕", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            textBox1.Location = new Point(135, 494);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(606, 54);
-            textBox1.TabIndex = 1;
+            txtInput.Font = new Font("맑은 고딕", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            txtInput.Location = new Point(135, 494);
+            txtInput.Name = "txtInput";
+            txtInput.Size = new Size(606, 54);
+            txtInput.TabIndex = 1;
             // 
-            // button1
+            // btnSend
             // 
-            button1.Location = new Point(807, 416);
-            button1.Name = "button1";
-            button1.Size = new Size(251, 132);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnSend.BackColor = Color.Gray;
+            btnSend.Font = new Font("맑은 고딕", 18F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnSend.ForeColor = Color.Black;
+            btnSend.Location = new Point(807, 416);
+            btnSend.Name = "btnSend";
+            btnSend.Size = new Size(251, 132);
+            btnSend.TabIndex = 2;
+            btnSend.Text = "전송";
+            btnSend.UseVisualStyleBackColor = false;
+            btnSend.Click += btnSend_Click;
             // 
-            // listBox1
+            // lstChat
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(135, 74);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(923, 319);
-            listBox1.TabIndex = 3;
+            lstChat.BackColor = Color.Cyan;
+            lstChat.Font = new Font("맑은 고딕", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            lstChat.FormattingEnabled = true;
+            lstChat.Location = new Point(135, 71);
+            lstChat.Name = "lstChat";
+            lstChat.Size = new Size(923, 304);
+            lstChat.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1169, 613);
-            Controls.Add(listBox1);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            ClientSize = new Size(1193, 628);
+            Controls.Add(lstChat);
+            Controls.Add(btnSend);
+            Controls.Add(txtInput);
             Controls.Add(EchoMessenger);
             Name = "Form1";
             Text = "Form1";
@@ -86,8 +94,8 @@
         #endregion
 
         private Label EchoMessenger;
-        private TextBox textBox1;
-        private Button button1;
-        private ListBox listBox1;
+        private TextBox txtInput;
+        private Button btnSend;
+        private ListBox lstChat;
     }
 }
